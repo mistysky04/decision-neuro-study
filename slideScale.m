@@ -105,8 +105,9 @@ startPosition = 'center';
 displayPos    = false;
 rangeType     = 1;
 stepSize      = 1;
-%HEDIE: Added picloc as an option idk whats happening here babes
 
+%HEDIE: Added "picloc" as original variable to reference findPicLoc for
+%picture positioning and scaling with slidescale function
 i = 1;
 while(i<=length(varargin))
     switch lower(varargin{i})
@@ -211,7 +212,7 @@ else
     textBounds = [Screen('TextBounds', screenPointer, sprintf(anchors{1})); Screen('TextBounds', screenPointer, sprintf(anchors{3}))];
 end
 
-%HEDIE: I just commented this out bc its not working for me
+%HEDIE: Removed drawImage since picloc is being used instead
 %if drawImage == 1
     %rectImage  = [center(1) - imageSize(2)/2 rect(4)*(scalaPosition - 0.2) - imageSize(1) center(1) + imageSize(2)/2 rect(4)*(scalaPosition - 0.2)];
     %if rect(4)*(scalaPosition - 0.2) - imageSize(1) < 0
@@ -251,7 +252,7 @@ while answer == 0
     end
     
     % Draw image if provided
-    %HEDIE: I edited this
+    %HEDIE: Edited from original to include picLoc
     if drawImage == 1
         Screen('DrawTexture', screenPointer, stimuli,[], picLoc, 0);
         %Screen('DrawTexture', screenPointer, stimuli,[] , rectImage, 0);
@@ -296,7 +297,7 @@ while answer == 0
 
     
     % Display position
-    %HEDIE: I just got rid of this
+    %HEDIE: Commented out due to errors
     %if displayPos == 'true'
         %DrawFormattedText(screenPointer, num2str(round(position)), 'center', rect(4)*(scalaPosition - 0.05)); 
     %end
