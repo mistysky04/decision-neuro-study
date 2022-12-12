@@ -31,14 +31,7 @@ FoodOnTime = Screen(PTBParams.win,'Flip',TrialStartTime + .25);
 %Response Keys
 KbName ('UnifyKeyNames');
 
-% Input for slide scale
-%HEDIE: I think I need to use switch cases for the question and anchor
-% if mod(PTBParams.subjid,2)
-%     KeyOrder = 'RL';
-% else
-%     KeyOrder = 'LR';
-% end
-           
+% Input for slide scale    
 %HEDIE: Switch case for questions & anchors 
 switch Attribute 
     case 'Fat'
