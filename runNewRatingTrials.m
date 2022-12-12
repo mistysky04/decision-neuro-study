@@ -4,7 +4,8 @@ function runNewRatingTrials(varargin)
 % subjective perceptions of fat, sodium, carb, sugar, protein, and vitamin content for the food choice
 % decision-making task
 %
-% Author: Hedie Mahmoudian
+% Author: Hedie Mahmoudian & Cendri Hutcherson (whose code was used as the
+% basis for this section of the study)
 % Last modified: May 22, 2022
 
 % try % for debugging purposes
