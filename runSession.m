@@ -27,7 +27,7 @@ end
 %% ----------------------- INITIALIZE VARIABLES ------------------------- %
 PTBParams.imgpath = fullfile(PTBParams.homepath, 'PTBscripts');
 % HEDIE: It's doubling up on PTBscripts in the file path, so I'm deleting
-% "PTBScripts" so hopefully it works
+% "PTBScripts"
 % PTBParams.imgpath = fullfile(PTBParams.homepath,'PTBScripts');
 PTBParams.foodPath = fullfile(PTBParams.homepath,'FoodPics');
 
@@ -39,7 +39,7 @@ else
     PTBParams.RLOrder = 1;
 end
 
-% HEDIE: I changed all of these LOL, deleted .png or .jpg since it was
+% HEDIE: Deleted .png or .jpg since it was
 % creating files that were .png.png, so MATLAB couldn't find them
 [PTBParams.ChoiceScale, PTBParams.ChoiceScaleSize] = ... % makeTxtrFromImg([PTBParams.imgpath '/ChoiceScale' LRdrx '.png'], 'PNG', PTBParams)
     makeTxtrFromImg([PTBParams.imgpath '\ChoiceScale' LRdrx], 'PNG', PTBParams);
@@ -92,8 +92,8 @@ else
 end
 
 %HEDIE: Deleted str2double since PTBParams.ssnid is already a double
-%HEDIE: also removed if statement for blockorder = [1 randperm(2) +1]; bc I don't think I can
-%make it work with only 2 conditions
+%HEDIE: also removed if statement for blockorder = [1 randperm(2) +1]; it
+%likely can't work with only 2 conditions
 blockorder = randperm(2); 
 
 trial = 1;
